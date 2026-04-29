@@ -1,0 +1,22 @@
+# Base image for running the harness itself in CI or locally without a host
+# Python install. Agent containers are separate (see agents/<arm>/Dockerfile,
+# added as each arm wires up).
+FROM python:3.12-slim
+
+ENV PYTHONUNBUFFERED=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PIP_NO_CACHE_DIR=1
+
+# uv for fast, lockfile-friendly installs.
+RUN pip install --no-cache-dir uv
+
+WORKDIR /work
+COPY pyproject.toml ./
+RUN uv pip install --system -e .
+
+COPY harness ./harness
+COPY tasks ./tasks
+COPY tests ./tests
+
+ENTRYPOINT ["python", "-m", "harness.run"]
+CMD ["--help"]

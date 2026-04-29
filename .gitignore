@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Environments / secrets
+.env
+.env.*
+!.env.example
+
+# uv
+.uv-cache/
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Editor
+.vscode/
+.idea/
+
+# Run artifacts — keep the directory, drop the contents.
+results/*
+!results/.gitkeep
+
+# OS
+.DS_Store

@@ -1,0 +1,24 @@
+{
+  "name": "pi-ultra-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "pi.dev extension that proxies tool calls to Ultra via MCP stdio. Used by the Conduit benchmark to isolate the substrate question (MCP vs bash) from the harness question (Ultra vs pi.dev).",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "smoke": "./smoke-test.sh"
+  },
+  "engines": {
+    "node": ">=20.6.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "typebox": "1.1.34"
+  },
+  "devDependencies": {
+    "@mariozechner/pi-coding-agent": "0.70.6",
+    "@types/node": "20.19.0",
+    "tsx": "4.20.6",
+    "typescript": "5.9.2"
+  }
+}

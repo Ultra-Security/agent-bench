@@ -1,0 +1,9 @@
+name: sanity
+image: python:3.12-slim
+prompt: |
+  Say "done".
+max_iterations: 1
+wall_clock_seconds: 60
+# This task exists to validate the harness end-to-end. verify.sh always
+# returns 0, so any agent (including the stub) passes. Real benchmark tasks
+# arrive with the TerminalBench / SWE-bench wiring.

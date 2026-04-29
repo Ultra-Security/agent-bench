@@ -1,0 +1,200 @@
+2026-04-27T10:00:01Z req-1409 INFO  cache miss for key 4657
+2026-04-27T10:00:03Z req-2679 INFO  user 7912 authenticated
+2026-04-27T10:00:04Z req-1488 ERROR Connection refused to upstream cache-1:6379
+2026-04-27T10:00:09Z req-4257 INFO  config reloaded from disk
+2026-04-27T10:00:13Z req-5557 INFO  request 3615 accepted
+2026-04-27T10:00:17Z req-6574 WARN  slow query took 1613ms
+2026-04-27T10:00:20Z req-2674 ERROR Connection refused to upstream redis-b:6380
+2026-04-27T10:00:25Z req-5333 INFO  GET /healthz 200
+2026-04-27T10:00:26Z req-7201 ERROR Failed to parse JSON payload at offset 434
+2026-04-27T10:00:31Z req-6925 INFO  user 1750 authenticated
+2026-04-27T10:00:33Z req-5741 INFO  cache miss for key 2654
+2026-04-27T10:00:37Z req-5554 INFO  shutdown signal received
+2026-04-27T10:00:40Z req-6820 WARN  retry attempt 1487 for upstream
+2026-04-27T10:00:41Z req-3803 INFO  cache miss for key 3677
+2026-04-27T10:00:45Z req-7216 WARN  queue depth approaching capacity 1459
+2026-04-27T10:00:50Z req-4598 INFO  request 4752 accepted
+2026-04-27T10:00:51Z req-6168 INFO  user 4456 authenticated
+2026-04-27T10:00:56Z req-6155 WARN  retry attempt 860 for upstream
+2026-04-27T10:01:00Z req-3340 WARN  slow query took 1575ms
+2026-04-27T10:01:05Z req-9830 WARN  queue depth approaching capacity 927
+2026-04-27T10:01:10Z req-7543 INFO  cache hit for key 9348
+2026-04-27T10:01:14Z req-2489 INFO  user 3504 authenticated
+2026-04-27T10:01:16Z req-7916 INFO  config reloaded from disk
+2026-04-27T10:01:21Z req-8668 INFO  request 2876 accepted
+2026-04-27T10:01:26Z req-5371 INFO  shutdown signal received
+2026-04-27T10:01:29Z req-8123 ERROR Connection refused to upstream cache-1:6380
+2026-04-27T10:01:34Z req-3927 INFO  user 5889 authenticated
+2026-04-27T10:01:39Z req-4258 ERROR Connection refused to upstream cache-1:6379
+2026-04-27T10:01:44Z req-6310 INFO  user 6947 authenticated
+2026-04-27T10:01:47Z req-4923 ERROR Database query exceeded deadline of 200ms
+2026-04-27T10:01:48Z req-8962 INFO  cache hit for key 3103
+2026-04-27T10:01:52Z req-3705 WARN  queue depth approaching capacity 916
+2026-04-27T10:01:54Z req-9835 INFO  cache miss for key 6107
+2026-04-27T10:01:58Z req-7118 INFO  GET /healthz 200
+2026-04-27T10:02:00Z req-4681 ERROR Connection refused to upstream cache-1:6379
+2026-04-27T10:02:05Z req-4608 ERROR Database query exceeded deadline of 1000ms
+2026-04-27T10:02:06Z req-4750 ERROR Connection refused to upstream redis-b:6379
+2026-04-27T10:02:11Z req-4899 WARN  retry attempt 488 for upstream
+2026-04-27T10:02:16Z req-3167 INFO  GET /healthz 200
+2026-04-27T10:02:20Z req-7669 WARN  slow query took 1399ms
+2026-04-27T10:02:24Z req-6804 INFO  GET /healthz 200
+2026-04-27T10:02:25Z req-1993 INFO  shutdown signal received
+2026-04-27T10:02:27Z req-4139 WARN  retry attempt 337 for upstream
+2026-04-27T10:02:31Z req-4006 WARN  slow query took 1840ms
+2026-04-27T10:02:32Z req-8260 INFO  user 1828 authenticated
+2026-04-27T10:02:37Z req-1241 INFO  cache miss for key 3724
+2026-04-27T10:02:41Z req-8956 INFO  config reloaded from disk
+2026-04-27T10:02:43Z req-7209 ERROR Failed to parse JSON payload at offset 145
+2026-04-27T10:02:47Z req-5673 INFO  GET /healthz 200
+2026-04-27T10:02:49Z req-5861 WARN  slow query took 1236ms
+2026-04-27T10:02:54Z req-1998 INFO  request 1821 accepted
+2026-04-27T10:02:59Z req-8811 INFO  cache hit for key 1931
+2026-04-27T10:03:04Z req-2312 INFO  user 2113 authenticated
+2026-04-27T10:03:06Z req-7615 ERROR Database query exceeded deadline of 200ms
+2026-04-27T10:03:11Z req-1651 INFO  config reloaded from disk
+2026-04-27T10:03:14Z req-5272 WARN  queue depth approaching capacity 693
+2026-04-27T10:03:16Z req-5351 INFO  background job 8491 completed
+2026-04-27T10:03:19Z req-2188 ERROR Database query exceeded deadline of 1000ms
+2026-04-27T10:03:20Z req-2200 INFO  background job 3170 completed
+2026-04-27T10:03:23Z req-2127 INFO  shutdown signal received
+2026-04-27T10:03:25Z req-8179 INFO  background job 9666 completed
+2026-04-27T10:03:26Z req-5905 INFO  user 3200 authenticated
+2026-04-27T10:03:29Z req-2891 INFO  cache hit for key 5462
+2026-04-27T10:03:32Z req-4450 INFO  cache miss for key 5325
+2026-04-27T10:03:37Z req-9004 WARN  slow query took 239ms
+2026-04-27T10:03:41Z req-5533 ERROR Failed to parse JSON payload at offset 404
+2026-04-27T10:03:43Z req-5291 ERROR Failed to parse JSON payload at offset 292
+2026-04-27T10:03:47Z req-1158 ERROR Database query exceeded deadline of 200ms
+2026-04-27T10:03:52Z req-1590 INFO  cache hit for key 8041
+2026-04-27T10:03:54Z req-1685 INFO  request 6862 accepted
+2026-04-27T10:03:56Z req-5088 INFO  shutdown signal received
+2026-04-27T10:04:01Z req-3532 INFO  cache miss for key 3662
+2026-04-27T10:04:03Z req-7755 ERROR Database query exceeded deadline of 500ms
+2026-04-27T10:04:07Z req-5065 WARN  queue depth approaching capacity 271
+2026-04-27T10:04:11Z req-1634 INFO  cache miss for key 4269
+2026-04-27T10:04:15Z req-6728 INFO  cache miss for key 4652
+2026-04-27T10:04:16Z req-4164 INFO  background job 2137 completed
+2026-04-27T10:04:19Z req-6753 INFO  config reloaded from disk
+2026-04-27T10:04:22Z req-1452 ERROR Failed to parse JSON payload at offset 101
+2026-04-27T10:04:27Z req-5349 ERROR Database query exceeded deadline of 500ms
+2026-04-27T10:04:30Z req-6139 INFO  user 7311 authenticated
+2026-04-27T10:04:35Z req-4114 WARN  queue depth approaching capacity 943
+2026-04-27T10:04:36Z req-9518 INFO  cache miss for key 6967
+2026-04-27T10:04:40Z req-2146 INFO  shutdown signal received
+2026-04-27T10:04:41Z req-5920 INFO  config reloaded from disk
+2026-04-27T10:04:45Z req-5844 INFO  cache miss for key 7888
+2026-04-27T10:04:49Z req-3851 INFO  background job 7653 completed
+2026-04-27T10:04:54Z req-1006 INFO  cache miss for key 8043
+2026-04-27T10:04:59Z req-6279 INFO  GET /healthz 200
+2026-04-27T10:05:04Z req-8752 INFO  cache hit for key 2389
+2026-04-27T10:05:07Z req-9445 INFO  shutdown signal received
+2026-04-27T10:05:09Z req-6085 WARN  slow query took 351ms
+2026-04-27T10:05:10Z req-1757 WARN  retry attempt 1301 for upstream
+2026-04-27T10:05:11Z req-8461 INFO  cache miss for key 7291
+2026-04-27T10:05:15Z req-7547 WARN  queue depth approaching capacity 1458
+2026-04-27T10:05:16Z req-2746 INFO  cache miss for key 3881
+2026-04-27T10:05:21Z req-8611 ERROR Connection refused to upstream redis-a:6380
+2026-04-27T10:05:23Z req-8612 INFO  shutdown signal received
+2026-04-27T10:05:28Z req-9270 INFO  GET /healthz 200
+2026-04-27T10:05:32Z req-8373 WARN  slow query took 1770ms
+2026-04-27T10:05:35Z req-9540 INFO  cache miss for key 5499
+2026-04-27T10:05:39Z req-2269 INFO  cache miss for key 5451
+2026-04-27T10:05:42Z req-6238 INFO  user 3267 authenticated
+2026-04-27T10:05:44Z req-4788 INFO  cache hit for key 4505
+2026-04-27T10:05:45Z req-7797 INFO  GET /healthz 200
+2026-04-27T10:05:46Z req-4388 INFO  config reloaded from disk
+2026-04-27T10:05:51Z req-7232 INFO  shutdown signal received
+2026-04-27T10:05:55Z req-7865 INFO  cache miss for key 8999
+2026-04-27T10:05:57Z req-5471 INFO  request 7371 accepted
+2026-04-27T10:06:00Z req-7624 INFO  GET /healthz 200
+2026-04-27T10:06:05Z req-9751 ERROR Failed to parse JSON payload at offset 313
+2026-04-27T10:06:10Z req-1444 ERROR Failed to parse JSON payload at offset 79
+2026-04-27T10:06:14Z req-3977 ERROR Failed to parse JSON payload at offset 177
+2026-04-27T10:06:16Z req-8449 INFO  config reloaded from disk
+2026-04-27T10:06:20Z req-5133 INFO  GET /healthz 200
+2026-04-27T10:06:25Z req-1853 INFO  shutdown signal received
+2026-04-27T10:06:26Z req-1659 INFO  cache miss for key 4266
+2026-04-27T10:06:27Z req-3496 WARN  retry attempt 1421 for upstream
+2026-04-27T10:06:28Z req-4571 INFO  background job 7043 completed
+2026-04-27T10:06:30Z req-2876 INFO  cache hit for key 6096
+2026-04-27T10:06:31Z req-1420 INFO  config reloaded from disk
+2026-04-27T10:06:33Z req-2245 INFO  cache miss for key 2669
+2026-04-27T10:06:36Z req-2983 INFO  request 6688 accepted
+2026-04-27T10:06:41Z req-8018 INFO  user 9289 authenticated
+2026-04-27T10:06:44Z req-1207 INFO  GET /healthz 200
+2026-04-27T10:06:48Z req-6934 INFO  GET /healthz 200
+2026-04-27T10:06:52Z req-3885 INFO  background job 9817 completed
+2026-04-27T10:06:56Z req-8616 INFO  background job 6280 completed
+2026-04-27T10:06:58Z req-2419 WARN  retry attempt 549 for upstream
+2026-04-27T10:07:02Z req-7209 INFO  GET /healthz 200
+2026-04-27T10:07:04Z req-8988 WARN  retry attempt 747 for upstream
+2026-04-27T10:07:07Z req-5526 INFO  cache miss for key 2402
+2026-04-27T10:07:09Z req-7658 INFO  cache miss for key 8800
+2026-04-27T10:07:13Z req-8342 INFO  user 5820 authenticated
+2026-04-27T10:07:15Z req-7625 INFO  background job 7046 completed
+2026-04-27T10:07:19Z req-9698 INFO  shutdown signal received
+2026-04-27T10:07:23Z req-5438 INFO  cache miss for key 2976
+2026-04-27T10:07:25Z req-6169 ERROR Database query exceeded deadline of 1000ms
+2026-04-27T10:07:27Z req-4138 WARN  retry attempt 616 for upstream
+2026-04-27T10:07:32Z req-9595 INFO  user 4180 authenticated
+2026-04-27T10:07:35Z req-4727 INFO  background job 1231 completed
+2026-04-27T10:07:40Z req-3073 WARN  slow query took 1183ms
+2026-04-27T10:07:43Z req-3068 INFO  GET /healthz 200
+2026-04-27T10:07:44Z req-5658 INFO  GET /healthz 200
+2026-04-27T10:07:46Z req-1841 WARN  retry attempt 283 for upstream
+2026-04-27T10:07:47Z req-7565 INFO  request 3485 accepted
+2026-04-27T10:07:49Z req-5978 ERROR Connection refused to upstream redis-a:6380
+2026-04-27T10:07:54Z req-4697 INFO  config reloaded from disk
+2026-04-27T10:07:58Z req-5871 INFO  config reloaded from disk
+2026-04-27T10:08:03Z req-1986 INFO  user 4404 authenticated
+2026-04-27T10:08:05Z req-5335 INFO  cache hit for key 4929
+2026-04-27T10:08:07Z req-2229 ERROR Failed to parse JSON payload at offset 240
+2026-04-27T10:08:12Z req-8699 WARN  slow query took 640ms
+2026-04-27T10:08:15Z req-8438 ERROR Connection refused to upstream redis-b:6379
+2026-04-27T10:08:19Z req-2880 INFO  cache hit for key 5352
+2026-04-27T10:08:21Z req-2169 ERROR Failed to parse JSON payload at offset 314
+2026-04-27T10:08:26Z req-5728 INFO  GET /healthz 200
+2026-04-27T10:08:30Z req-5460 INFO  GET /healthz 200
+2026-04-27T10:08:31Z req-1653 INFO  shutdown signal received
+2026-04-27T10:08:32Z req-2496 WARN  queue depth approaching capacity 1762
+2026-04-27T10:08:37Z req-1339 INFO  background job 1659 completed
+2026-04-27T10:08:39Z req-8708 INFO  GET /healthz 200
+2026-04-27T10:08:41Z req-8141 INFO  GET /healthz 200
+2026-04-27T10:08:45Z req-6700 INFO  shutdown signal received
+2026-04-27T10:08:47Z req-6403 INFO  GET /healthz 200
+2026-04-27T10:08:51Z req-1601 INFO  shutdown signal received
+2026-04-27T10:08:54Z req-2899 INFO  config reloaded from disk
+2026-04-27T10:08:55Z req-9889 INFO  request 4073 accepted
+2026-04-27T10:09:00Z req-6927 INFO  GET /healthz 200
+2026-04-27T10:09:01Z req-4335 WARN  slow query took 1949ms
+2026-04-27T10:09:04Z req-8178 INFO  GET /healthz 200
+2026-04-27T10:09:05Z req-4920 INFO  background job 1224 completed
+2026-04-27T10:09:10Z req-7684 ERROR Connection refused to upstream redis-b:6379
+2026-04-27T10:09:12Z req-9165 INFO  background job 9337 completed
+2026-04-27T10:09:15Z req-7807 INFO  GET /healthz 200
+2026-04-27T10:09:19Z req-3369 INFO  cache hit for key 2143
+2026-04-27T10:09:22Z req-7798 INFO  background job 1042 completed
+2026-04-27T10:09:25Z req-5891 INFO  GET /healthz 200
+2026-04-27T10:09:29Z req-9824 INFO  shutdown signal received
+2026-04-27T10:09:33Z req-8460 INFO  cache miss for key 4912
+2026-04-27T10:09:38Z req-7274 WARN  retry attempt 139 for upstream
+2026-04-27T10:09:41Z req-8749 INFO  config reloaded from disk
+2026-04-27T10:09:43Z req-9115 INFO  cache hit for key 9229
+2026-04-27T10:09:48Z req-6439 INFO  GET /healthz 200
+2026-04-27T10:09:53Z req-8486 ERROR Connection refused to upstream redis-b:6379
+2026-04-27T10:09:54Z req-8692 INFO  background job 6546 completed
+2026-04-27T10:09:59Z req-7512 INFO  shutdown signal received
+2026-04-27T10:10:03Z req-6188 INFO  GET /healthz 200
+2026-04-27T10:10:04Z req-2121 WARN  queue depth approaching capacity 1936
+2026-04-27T10:10:07Z req-4727 INFO  config reloaded from disk
+2026-04-27T10:10:08Z req-8269 ERROR Failed to parse JSON payload at offset 472
+2026-04-27T10:10:09Z req-1753 INFO  request 5806 accepted
+2026-04-27T10:10:12Z req-7141 INFO  cache miss for key 9702
+2026-04-27T10:10:16Z req-3950 ERROR Connection refused to upstream cache-1:6380
+2026-04-27T10:10:21Z req-4945 INFO  cache hit for key 4804
+2026-04-27T10:10:25Z req-5161 INFO  request 8622 accepted
+2026-04-27T10:10:28Z req-9955 ERROR Failed to parse JSON payload at offset 493
+2026-04-27T10:10:31Z req-5901 INFO  config reloaded from disk
+2026-04-27T10:10:35Z req-5949 WARN  retry attempt 1797 for upstream
+2026-04-27T10:10:39Z req-2747 WARN  queue depth approaching capacity 785

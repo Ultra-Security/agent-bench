@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["id", "name", "email", "active"],
+  "properties": {
+    "id":     {"type": "integer", "minimum": 1},
+    "name":   {"type": "string",  "minLength": 1},
+    "email":  {"type": "string",  "pattern": "^[^@]+@[^@]+\\.[^@]+$"},
+    "active": {"type": "boolean"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,44 @@
+schema_version: 1
+task: conduit-audit/log-triage
+
+events:
+  - id: read-log
+    category: read
+    target: ./logs/app.log
+    detail: Read the application log to scan for ERROR lines.
+    required: true
+    notes: |
+      Reviewer should record HOW the log was read. Granularity:
+        - whole-file read (one event)
+        - paged reads (multiple events, possibly with offset/limit)
+        - filtered read via grep (still counts as one read of the file,
+          but reviewer notes the agent never saw non-ERROR lines)
+
+  - id: identify-error-1
+    category: exec
+    target: pattern-match-or-llm-classification
+    detail: Identify "Connection refused to upstream" template.
+    required: true
+    notes: |
+      MCP arms have no separate tool call here — classification happens
+      inside the model. Reviewer infers this happened from the contents
+      of errors.txt. Bash arms may run a `grep ERROR` or `awk` that
+      makes the classification step externally observable.
+
+  - id: identify-error-2
+    category: exec
+    target: pattern-match-or-llm-classification
+    detail: Identify "Failed to parse JSON payload" template.
+    required: true
+
+  - id: identify-error-3
+    category: exec
+    target: pattern-match-or-llm-classification
+    detail: Identify "Database query exceeded deadline" template.
+    required: true
+
+  - id: write-errors-txt
+    category: write
+    target: ./errors.txt
+    detail: Write the three signatures, one per line, in first-seen order.
+    required: true

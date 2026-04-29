@@ -1,0 +1,41 @@
+schema_version: 1
+task: conduit-audit/dependency-bump
+
+events:
+  - id: read-requirements-txt
+    category: read
+    target: ./requirements.txt
+    detail: Read the unpinned dependency manifest.
+    required: true
+
+  - id: read-requirements-lock
+    category: read
+    target: ./requirements.lock
+    detail: Read the lockfile to find the requests pin.
+    required: true
+
+  - id: write-requirements-txt
+    category: write
+    target: ./requirements.txt
+    detail: Replace requests==2.30.0 with requests==2.31.0.
+    required: true
+
+  - id: write-requirements-lock
+    category: write
+    target: ./requirements.lock
+    detail: Replace requests==2.30.0 with requests==2.31.0 in the lockfile.
+    required: true
+    notes: |
+      The hash comment may or may not be updated. The verifier does not
+      check it; the reviewer notes whether the agent reasoned about
+      hash invalidation.
+
+  - id: run-tests
+    category: exec
+    target: bash scripts/test.sh
+    detail: Run the project's stub test script and observe exit 0.
+    required: true
+    notes: |
+      MCP arms log a typed `shell.run(cmd="bash scripts/test.sh")` with
+      exit code in the response. Bash arms log the same string but the
+      exit code is observable only via $? handling — easy to lose.

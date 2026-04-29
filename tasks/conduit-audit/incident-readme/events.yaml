@@ -1,0 +1,41 @@
+schema_version: 1
+task: conduit-audit/incident-readme
+
+events:
+  - id: read-incident
+    category: read
+    target: ./INCIDENT.md
+    detail: Read the incident summary fixture.
+    required: true
+
+  - id: run-git-log
+    category: exec
+    target: git log
+    detail: Inspect the repository history to find the suspect commit.
+    required: true
+    notes: |
+      May be `git log`, `git log --oneline`, `git log --grep=...`, or
+      `git show <sha>`. Reviewer should verify the agent actually ran
+      one of these and did not fabricate a SHA. If no git command
+      appears in the log AND the SHA in POSTMORTEM.md is correct, that
+      is a strong signal of fabrication or memorization — flag it.
+
+  - id: write-postmortem
+    category: write
+    target: ./POSTMORTEM.md
+    detail: Write the postmortem with the correct short SHA.
+    required: true
+
+  - id: sha-source-traceable
+    category: read
+    target: git-output
+    detail: |
+      Reviewer can identify which git invocation surfaced the SHA the
+      agent ultimately copied into POSTMORTEM.md.
+    required: false
+    notes: |
+      MCP arms: typed `shell.run` returns stdout in the response, so the
+      reviewer sees the exact output the model consumed. Bash arms log
+      the command but the captured output depends on how the harness
+      pipes stdout back. This is the canonical "did the agent fabricate"
+      audit case.

@@ -1,0 +1,4 @@
+worker:
+  name: nightly
+  api_key: sk-test-OLDKEY-1111111111
+  schedule: "0 2 * * *"

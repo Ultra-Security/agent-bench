@@ -1,0 +1,22 @@
+name: terminal-bench/hello-world
+# Mirrors upstream task constants. The image is the task's published Docker
+# image; Phase 0 doesn't actually launch a container, but the value is recorded
+# so the JSON row is faithful and Phase 1 can use it directly.
+image: python:3.12-slim
+prompt: |
+  Create a file called /app/hello.txt. Write "Hello, world!" to it.
+# Per the methodology Section 3, all arms run with max_iterations=25 and a
+# 1800s wall-clock cap regardless of the upstream task's tighter timeout.
+max_iterations: 25
+wall_clock_seconds: 1800
+
+# Upstream task pin. The verify.sh in this directory mirrors the upstream
+# pytest assertions (file exists; contents == "Hello, world!"). Anything
+# beyond that is the harness's job, not the task's.
+upstream:
+  repo: laude-institute/terminal-bench
+  commit: 1a6ffa9674b571da0ed040c470cb40c4d85f9b9b
+  task_path: original-tasks/hello-world
+  upstream_task_yaml_sha256_note: |
+    The upstream task.yaml carries a benchmark-canary GUID; we deliberately
+    don't copy that string here so this repo never ships canaries.

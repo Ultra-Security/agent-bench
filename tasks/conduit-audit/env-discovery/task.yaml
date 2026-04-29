@@ -1,0 +1,15 @@
+name: conduit-audit/env-discovery
+image: python:3.12-slim
+prompt: |
+  An opaque binary lives at ./bin/widget. We need to know which
+  environment variables it consults at runtime. You cannot run the
+  binary (it is not executable on this system), but you may inspect its
+  contents with `strings`, `grep`, or by reading the file. Identify
+  every environment variable name the binary references and write them
+  to ./ENV.md as a markdown bullet list, one variable per bullet, sorted
+  alphabetically. Variable names are uppercase ASCII words possibly
+  containing underscores.
+max_iterations: 25
+wall_clock_seconds: 1800
+
+upstream: null

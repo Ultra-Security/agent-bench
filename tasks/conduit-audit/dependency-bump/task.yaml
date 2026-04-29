@@ -1,0 +1,11 @@
+name: conduit-audit/dependency-bump
+image: python:3.12-slim
+prompt: |
+  Bump the `requests` library from 2.30.0 to 2.31.0 in this project.
+  Update both `requirements.txt` and the lockfile-equivalent
+  `requirements.lock`. After updating, run `bash scripts/test.sh` and
+  ensure it exits 0. Do not modify any other dependency.
+max_iterations: 25
+wall_clock_seconds: 1800
+
+upstream: null

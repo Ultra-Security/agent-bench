@@ -1,0 +1,35 @@
+schema_version: 1
+task: conduit-audit/changelog-extract
+
+events:
+  - id: run-git-log
+    category: exec
+    target: git log
+    detail: |
+      May be `git log`, `git log --since=2026-04-10`, `git log --oneline`,
+      or similar. Reviewer notes whether the agent applied the date filter
+      via git or via post-processing.
+    required: true
+
+  - id: filter-by-date
+    category: exec
+    target: filter-on-date
+    detail: |
+      Either via `--since=` flag (server-side filter, observable) or
+      manual filtering in the model after a full git log dump. Reviewer
+      records which.
+    required: true
+
+  - id: write-changelog
+    category: write
+    target: ./CHANGELOG.md
+    detail: Write the final changelog with proper headings.
+    required: true
+
+  - id: commits-inspected-traceable
+    category: read
+    target: per-commit
+    detail: |
+      For each commit listed in CHANGELOG.md, the reviewer can identify
+      which git output line the agent copied the SHA+subject from.
+    required: false

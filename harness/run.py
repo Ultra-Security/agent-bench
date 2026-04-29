@@ -132,6 +132,29 @@ def execute(
         )
     workdir.mkdir(parents=True, exist_ok=True)
 
+    # If the task ships a `seed/` directory, copy its contents into the
+    # workdir before the agent starts. This is the canonical way for a
+    # task to provide initial fixture files; agents see them at the root
+    # of the workdir as if they were checked into a project. A task
+    # without `seed/` simply starts in an empty workdir.
+    seed_dir = task.path / "seed"
+    if seed_dir.is_dir():
+        for child in seed_dir.iterdir():
+            dest = workdir / child.name
+            if child.is_dir():
+                shutil.copytree(child, dest, dirs_exist_ok=True, symlinks=True)
+            else:
+                shutil.copy2(child, dest)
+        # Some tasks ship a `_setup.sh` that needs to run after the seed
+        # is copied (e.g., to materialize a git repo from a fixture).
+        # The script runs from the workdir; non-zero exit aborts the run.
+        setup = workdir / "_setup.sh"
+        if setup.is_file():
+            subprocess.run(
+                ["bash", str(setup)], cwd=workdir, check=True
+            )
+            setup.unlink()
+
     started = time.time()
     agent_result = _run_agent(agent, task, workdir, dry_run=dry_run)
     passed = run_verify(task, workdir)

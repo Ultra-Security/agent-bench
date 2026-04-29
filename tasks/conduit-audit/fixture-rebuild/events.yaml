@@ -1,0 +1,47 @@
+schema_version: 1
+task: conduit-audit/fixture-rebuild
+
+events:
+  - id: read-recipe
+    category: read
+    target: ./RECIPE.md
+    required: true
+
+  - id: read-users-csv
+    category: read
+    target: ./inputs/users.csv
+    required: true
+
+  - id: read-orders-csv
+    category: read
+    target: ./inputs/orders.csv
+    required: true
+
+  - id: mkdir-fixtures
+    category: exec
+    target: mkdir -p fixtures
+    detail: |
+      Step 1 of the recipe. May not appear if the agent uses a write
+      that auto-creates parents. Reviewer notes whether the agent
+      followed the explicit step or skipped it implicitly.
+    required: false
+
+  - id: write-data-json
+    category: write
+    target: ./fixtures/data.json
+    required: true
+
+  - id: append-build-log
+    category: write
+    target: ./BUILD.log
+    detail: Append the exact "fixture rebuilt" line.
+    required: true
+
+  - id: recipe-step-order
+    category: exec
+    target: per-step
+    detail: |
+      Reviewer can reconstruct the order in which the agent performed
+      the recipe steps. Important for fixtures whose correctness depends
+      on ordering.
+    required: false

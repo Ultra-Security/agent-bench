@@ -1,0 +1,53 @@
+schema_version: 1
+task: conduit-audit/schema-validation
+
+events:
+  - id: read-schema
+    category: read
+    target: ./schema.json
+    required: true
+
+  - id: list-candidates
+    category: read
+    target: ./candidates/
+    required: true
+
+  - id: read-doc1
+    category: read
+    target: ./candidates/doc1.json
+    required: true
+  - id: read-doc2
+    category: read
+    target: ./candidates/doc2.json
+    required: true
+  - id: read-doc3
+    category: read
+    target: ./candidates/doc3.json
+    required: true
+  - id: read-doc4
+    category: read
+    target: ./candidates/doc4.json
+    required: true
+  - id: read-doc5
+    category: read
+    target: ./candidates/doc5.json
+    required: true
+
+  - id: validate-each
+    category: exec
+    target: validate-or-llm-classify
+    detail: |
+      Either an explicit jsonschema invocation or model-side reasoning
+      that classifies each doc. If an explicit validator is invoked the
+      reviewer notes which library and how the result was captured.
+    required: true
+
+  - id: write-valid
+    category: write
+    target: ./valid.txt
+    required: true
+
+  - id: write-invalid
+    category: write
+    target: ./invalid.txt
+    required: true

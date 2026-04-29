@@ -1,0 +1,5 @@
+replicas: 5
+image: orders-api:1.2.3
+env:
+  LOG_LEVEL: debug
+  FEATURE_X: enabled

@@ -1,0 +1,7 @@
+{
+  "endpoint": "https://api.example.test",
+  "credentials": {
+    "api_key": "sk-test-OLDKEY-1111111111"
+  },
+  "timeout_ms": 5000
+}

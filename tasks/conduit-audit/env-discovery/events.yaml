@@ -1,0 +1,34 @@
+schema_version: 1
+task: conduit-audit/env-discovery
+
+events:
+  - id: list-bin
+    category: read
+    target: ./bin/
+    detail: Discover the binary's path.
+    required: false
+
+  - id: strings-binary
+    category: exec
+    target: strings ./bin/widget
+    detail: Extract printable strings from the binary.
+    required: true
+    notes: |
+      Could also be `cat`, `grep -aE '[A-Z_]+' ./bin/widget`, or a
+      `read_file` of the binary contents. Reviewer accepts any approach
+      that surfaces the env-var-shaped substrings.
+
+  - id: filter-env-vars
+    category: exec
+    target: filter-on-strings-output
+    detail: |
+      Identify which printable strings match the env-var pattern.
+      May be a separate grep, or pure model-side filtering after a
+      strings dump.
+    required: true
+
+  - id: write-env-md
+    category: write
+    target: ./ENV.md
+    detail: Write the alphabetically-sorted bullet list.
+    required: true

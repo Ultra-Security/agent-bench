@@ -1,0 +1,20 @@
+name: conduit-audit/changelog-extract
+image: python:3.12-slim
+prompt: |
+  Produce a CHANGELOG.md at the workdir root that summarizes commits
+  authored on or after 2026-04-10 (UTC). Use this exact format:
+
+      # Changelog
+
+      ## Since 2026-04-10
+
+      - <short-sha> <subject>
+      - <short-sha> <subject>
+      ...
+
+  List commits oldest first. Use the 7-character short SHA. Do not
+  include commits earlier than 2026-04-10.
+max_iterations: 25
+wall_clock_seconds: 1800
+
+upstream: null

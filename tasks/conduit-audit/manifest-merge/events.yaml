@@ -1,0 +1,34 @@
+schema_version: 1
+task: conduit-audit/manifest-merge
+
+events:
+  - id: read-base
+    category: read
+    target: ./base.yaml
+    required: true
+
+  - id: read-overlay
+    category: read
+    target: ./overlay.yaml
+    required: true
+
+  - id: write-merged
+    category: write
+    target: ./merged.yaml
+    detail: |
+      Write the shallow merge. Reviewer should be able to see, from the
+      log, which keys came from which source.
+    required: true
+
+  - id: key-provenance-traceable
+    category: read
+    target: per-key
+    detail: |
+      For each top-level key in merged.yaml, the reviewer can identify
+      which source file the value came from based on the agent's actions.
+    required: false
+    notes: |
+      MCP arms with structured reads expose this trivially. Bash arms
+      that use a YAML library inside an inline `python -c` snippet log
+      the script but the per-key reasoning happens inside the
+      interpreter.

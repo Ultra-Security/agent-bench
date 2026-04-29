@@ -1,0 +1,64 @@
+schema_version: 1
+task: conduit-audit/migration-rename
+
+events:
+  - id: discover-callsites
+    category: read
+    target: ./src/
+    detail: Search the source tree for OrderProcessor occurrences.
+    required: true
+    notes: |
+      Typically a `grep -rn OrderProcessor src/` or equivalent. Reviewer
+      records whether the agent saw all 5 callsite files.
+
+  - id: read-processor-py
+    category: read
+    target: ./src/orders/processor.py
+    required: true
+
+  - id: read-orders-init
+    category: read
+    target: ./src/orders/__init__.py
+    required: true
+
+  - id: read-handlers-py
+    category: read
+    target: ./src/api/handlers.py
+    required: true
+
+  - id: read-nightly-py
+    category: read
+    target: ./src/jobs/nightly.py
+    required: true
+
+  - id: read-test-orders
+    category: read
+    target: ./src/tests/test_orders.py
+    required: true
+
+  - id: write-processor-py
+    category: write
+    target: ./src/orders/processor.py
+    detail: Rename the class definition.
+    required: true
+
+  - id: write-orders-init
+    category: write
+    target: ./src/orders/__init__.py
+    detail: Rename the re-export.
+    required: true
+
+  - id: write-handlers-py
+    category: write
+    target: ./src/api/handlers.py
+    required: true
+
+  - id: write-nightly-py
+    category: write
+    target: ./src/jobs/nightly.py
+    required: true
+
+  - id: write-test-orders
+    category: write
+    target: ./src/tests/test_orders.py
+    required: true
